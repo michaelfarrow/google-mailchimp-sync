@@ -17,4 +17,6 @@ node:
     - data
   environment:
     NODE_RUN_ENV: production
+  env_file:
+    - /home/deploy/.env
   restart: always
