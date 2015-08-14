@@ -11,7 +11,7 @@ cd app-build
 heading "Pulling Docker images"
 docker-compose pull >/dev/null
 
-tools/env_check
+tools/env_check production
 
 cd ../
 
