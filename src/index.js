@@ -7,12 +7,9 @@ var env       = require('node-env-file'),
     google    = require('googleapis'),
     mailchimp = require('mailchimp').MailChimpAPI;
 
-var envPath       = __dirname + '/.env.' + process.env.NODE_RUN_ENV,
-    envPathDeploy = '/home/deploy/.env';
+var envPath = __dirname + '/.env.' + process.env.NODE_RUN_ENV;
 
-if(fs.existsSync(envPathDeploy)){
-	env(envPathDeploy);
-}else if(fs.existsSync(envPath)){
+if(fs.existsSync(envPath)){
 	env(envPath);
 }
 
